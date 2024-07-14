@@ -1,15 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Dial Clone</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .category {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+            height: 250px;
+        }
+        .category:hover {
+            transform: scale(1.05);
+        }
+        .h3 {
+            color: rgb(255, 60, 0);
+            font-family: sans-serif;
+            font-size: 23px;
+        }
+        .just {
+            color: rgb(105, 105, 222);
+        }
+        .category1 {
+            height: 50px;
+            width: 50px;
+            border: 1px solid #1b1818;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 24px;
+            border-radius: 10px;
+          
+        }
+        #second-section{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    </style>
 </head>
 <body>
-  <div class="box" id="box1"></div>
-  <div class="box" id="box2"></div>
-  <div class="box" id="box3"></div>
-  <div class="box" id="box4"></div>
+    <!-- Navigation Bar -->
+    <header class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h3"><span class="just">Just </span>Dial</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="bg-primary text-white py-5">
+        <div class="container d-flex justify-content-center">
+            <input type="text" class="form-control w-75" placeholder="Search for products, services, or businesses...">
+            <button class="btn btn-light ml-3">Search</button>
+        </div>
+    </section>
+
+    <!-- Popular Categories -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Popular Categories</h2>
+            <div class="row">
+                <!-- Main Carousel -->
+                <div class="col-md-6 mb-4">
+                    <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="category p-3 border text-center">Main Category 1</div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="category p-3 border text-center">Main Category 2</div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="category p-3 border text-center">Main Category 3</div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Static Categories -->
+                <div class="col-md-2 mb-4">
+                    <div class="category p-3 border text-center">Restaurants</div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <div class="category p-3 border text-center">Doctors</div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <div class="category p-3 border text-center">Plumbers</div>
+                </div>
+            </div>
+            <div class="row" >
+                < class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border  text-center"><i class="fa fa-cutlery"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-scissors"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-home"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-briefcase"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-briefcase"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-briefcase"></i></div>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border  text-center"><i class="fa fa-cutlery"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-scissors"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-home"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-briefcase"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-briefcase"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-briefcase"></i></div>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border  text-center"><i class="fa fa-cutlery"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-scissors"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-home"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-briefcase"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-briefcase"></i></div>
+                </div>
+                <div class="col-md-2 pl-2 mb-4">
+                    <div class="category1 ml-5 p-3 border text-center"><i class="fa fa-briefcase"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Just Dial Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
