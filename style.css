@@ -1,0 +1,22 @@
+body{
+  margin:0px;
+}
+.box{
+  width:100px;
+  height: 100px;
+  background-color: black;
+  font:bold 2rem cursive;
+  color:white;
+  margin:2vmax;
+  transition:mymove ;
+}
+#box1:hover{
+background-color: tomato;
+color:blue;
+
+}
+@keyframes mymove {
+  from {
+    scale:calc(0)}
+  to {top: 200px;}
+}
